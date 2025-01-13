@@ -4,3 +4,4 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(Move)
 add_subdirectory(Copy)
+add_subdirectory(Templates)
