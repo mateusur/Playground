@@ -1,1 +1,2 @@
 add_executable(linkedList linkedList.cpp)
+add_executable(reverseLinkedList reverseLinkedList.cpp)
