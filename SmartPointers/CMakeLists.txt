@@ -1,1 +1,2 @@
 add_executable(uniquePointer uniquePointer.cpp)
+add_executable(sharedPointer sharedPointer.cpp)
