@@ -26,13 +26,12 @@ public:
         other.m_ptr = nullptr;
     }
     Unique_pointer& operator=(Unique_pointer&& other){
-        if(other == this){
-            return *this;
+        if(&other != this){
+            delete m_ptr;
+            m_ptr = other.m_ptr;
+            other.m_ptr = nullptr;
         }
-        delete m_ptr;
-
-        m_ptr = other.m_ptr;
-        other.m_ptr = nullptr;
+        return *this;
     }
     ~Unique_pointer(){
         delete m_ptr;
