@@ -48,6 +48,22 @@ public:
         }
         return *this;
     }
+    Shared_pointer(Shared_pointer&& other){
+        m_ptr = other.m_ptr;
+        m_counter = other.m_counter;
+        other.m_ptr = nullptr;
+        other.m_counter = nullptr;
+    }
+    Shared_pointer& operator=(Shared_pointer&& other){
+        if(this != &other){
+            release();
+            m_ptr = other.m_ptr;
+            m_counter = other.m_counter;
+            other.m_ptr = nullptr;
+            other.m_counter = nullptr;
+        }
+        return *this;
+    }
     ~Shared_pointer(){
         release();
     }
