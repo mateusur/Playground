@@ -1,3 +1,4 @@
 add_executable(singleResponsibilityPrinciple singleResponsibilityPrinciple.cpp)
 add_executable(openClosedPrinciple openClosedPrinciple.cpp)
 add_executable(liskovSubstitutionPrinciple liskovSubstitutionPrinciple.cpp)
+add_executable(interfaceSegragationPrinciple interfaceSegragationPrinciple.cpp)
